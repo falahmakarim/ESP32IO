@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-l298n", "id": "driver1", "top": 140, "left": -160, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -168.29,
+      "left": -277.52,
+      "attrs": { "label": "Bipolar Stepper", "steps": "200", "wires": "A+,A-,B+,B-" }
+    }
+  ],
+  "connections": [
+    [ "esp:12", "driver1:IN1", "green", [ "h0" ] ],
+    [ "esp:13", "driver1:IN2", "green", [ "h0" ] ],
+    [ "esp:14", "driver1:IN3", "green", [ "h0" ] ],
+    [ "esp:15", "driver1:IN4", "green", [ "h0" ] ],
+    [ "driver1:OUT1", "stepper1:A+", "orange", [ "h0" ] ],
+    [ "driver1:OUT2", "stepper1:A-", "orange", [ "h0" ] ],
+    [ "driver1:OUT3", "stepper1:B+", "orange", [ "h0" ] ],
+    [ "driver1:OUT4", "stepper1:B-", "orange", [ "h0" ] ],
+    [ "driver1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "driver1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "driver1:EN1", "esp:3V3.1", "red", [ "h0" ] ],
+    [ "driver1:EN2", "esp:3V3.2", "red", [ "h0" ] ],
+    [ "stepper1:A-", "esp:12", "green", [ "v0" ] ],
+    [ "stepper1:A+", "esp:13", "green", [ "v0" ] ],
+    [ "stepper1:B+", "esp:14", "green", [ "v0" ] ],
+    [ "stepper1:B-", "esp:15", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
