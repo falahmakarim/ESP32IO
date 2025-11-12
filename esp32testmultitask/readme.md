@@ -3,7 +3,7 @@ NRP : 3223600002
 Kelas : 3 D4 TEKKOM A
 
 Deskripsi :
-Program ini adalah integrasi 8 periferal pada ESP32 menggunakan FreeRTOS dan melakukan task handle
+Program ini adalah integrasi 8 periferal pada ESP32 menggunakan FreeRTOS untuk  melakukan multitasking dengan task handle
 
 | Peripheral         | Pin ESP32        | Keterangan                                                         |
 | ------------------ | ---------------- | ------------------------------------------------------------------ |
@@ -21,3 +21,4 @@ Program ini adalah integrasi 8 periferal pada ESP32 menggunakan FreeRTOS dan mel
 | Rotary Encoder DT  | 41               | Input pull-up                                                      |
 | OLED SDA           | Default Wire SDA | I²C SDA                                                            |
 | OLED SCL           | Default Wire SCL | I²C SCL                                                            |
+
